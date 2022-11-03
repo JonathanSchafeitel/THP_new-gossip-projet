@@ -1,0 +1,19 @@
+<div class="container justify-content-center" style="text-align:center;">
+
+<h2 >Connexion</h2>
+
+<%= form_tag sessions_path do |form| %>
+  <div class="field" style='margin-bottom:1em;'>
+    <%= label_tag :mail %>
+    <%= text_field_tag :mail %>
+  </div>
+  <div class="field" style='padding-right:2em;'>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions" style='margin-top:1em;'>
+    <%= submit_tag "Login" %>
+  </div>
+<% end %>
+
+</div>

@@ -1,0 +1,29 @@
+<div style="text-align: center;">
+
+<h1>Index des Gossips </h1>
+
+<p>
+<a href="<%= new_gossip_path %>" class="btn btn-success">Créer un gossip</a>
+</p>
+
+<% @gossips.each do  |gossip | %>
+  
+  <div class="card">
+  <div class="card-header">
+  Gossip numero : <%= gossip.id %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= gossip.title %></h5>
+    <p class="card-text">Auteur : <%= gossip.author %></p>
+    <p class="card-text"><%= gossip.content %></p>
+    <a href="<%= gossip_path(gossip.id) %>" class="btn btn-primary">Lire la suite</a>
+    <a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-info">Editer</a>
+    <%= button_to "Supprimer", gossip_path(gossip.id), method: :delete, class: "btn btn-danger" %>
+  </div>
+  </div>
+
+
+
+
+  <% end %>
+</div>

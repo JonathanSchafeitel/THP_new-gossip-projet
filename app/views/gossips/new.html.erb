@@ -1,0 +1,23 @@
+<div style="text-align: center;">
+
+<h1>Créer un gossip</h1>
+
+<%= form_for @gossip, local: true do |f| %>
+  <div class="form-group">
+    <label>Tire du gossip</label>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>Nom de l author</label>
+    <%= f.text_field :author, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label>Contenu du gossip :</label>
+    <%= f.text_area :content, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+  <button type="submit" class="btn btn-primary">Créer l'article</button>
+  </div>
+
+</div>
+<% end %>
